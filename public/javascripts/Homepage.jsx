@@ -9,8 +9,8 @@ export default class Homepage extends Component {
     }
 
     render() {
-        // const time = Promise.resolve(getEdmontonTime());
-        // console.log(time);
+        const time = Promise.resolve(getEdmontonTime());
+        console.log(time);
         return (
             <div>
                 <LeftNav/>
