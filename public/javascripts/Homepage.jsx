@@ -17,6 +17,7 @@ export default class Homepage extends Component {
                 <div className="main-content">
                     <ImageSlider />
                 </div>
+                {time}
             </div>
             );
 

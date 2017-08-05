@@ -26,5 +26,6 @@ module.exports = {
                 plugins: ["transform-class-properties"]
             }
         }]
-    }
+    },
+    devtool:  'cheap-module-source-map'
 }
