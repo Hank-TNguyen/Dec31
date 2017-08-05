@@ -23,7 +23,7 @@ module.exports = {
                 cacheDirectory: true, //false for production
                 babelrc: false,
                 presets: ["babel-preset-es2015", "react"],
-                plugins: ["transform-es2015-arrow-functions", "transform-class-properties"]
+                plugins: ["transform-class-properties"]
             }
         }]
     }

@@ -12962,8 +12962,8 @@ var Homepage = function (_Component) {
     _createClass(Homepage, [{
         key: "render",
         value: function render() {
-            var time = Promise.resolve((0, _TimeUtil2.default)());
-            console.log(time);
+            // const time = Promise.resolve(getEdmontonTime());
+            // console.log(time);
             return _react2.default.createElement(
                 "div",
                 null,
