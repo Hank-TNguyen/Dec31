@@ -9,11 +9,6 @@ import LeftNav from "./LeftNav.jsx"
 //     document.getElementById('main')
 // );
 
-// ReactDOM.render(
-//     <CentreQuote />,
-//     document.getElementById('quote')
-// );
-
 ReactDOM.render(
     <Homepage />,
     document.getElementById('homepage')

@@ -1,0 +1,25 @@
+{
+    "story": [
+        {
+            "title": "Vietnam",
+            "image": "../images/vietnam.png",
+            "text": "This is where I was born."
+        },
+        {
+            "title": "Singapore",
+            "image": "../images/singapore.png",
+            "text": "I took the opportunity to have an academic exchange semester in Singapore."
+        },
+
+        {
+            "title": "Alberta, Canada",
+            "image": "../images/alberta.png",
+            "text": "I stated a new chapter in my life when I was 18. I'm currently here and pursuing a BSc. (Hons) in Computing Science."
+        },
+        {
+            "title": "China",
+            "image": "../images/china.png",
+            "text": "Cultural Exchange"
+        }
+    ]
+}

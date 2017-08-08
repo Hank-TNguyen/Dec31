@@ -1,10 +1,12 @@
 @import "./tippy.css";
 @import "./slick-theme.css";
 @import "./slick.css";
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Saira');
 
 body
     padding: 50px
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+    font: 14px "Saira", Helvetica, Arial, sans-serif
 
 a
     color: #00B7FF
@@ -19,6 +21,20 @@ $modal-color-code: #F5FAFA;
     top: 0
     height: 100%
     width: 80%
+
+    .story
+        .title
+            position: fixed
+            top: 35%
+            left: 27%
+            color: #F5FAFA
+            font-size: 31px
+
+        .text
+            position: fixed
+            top: 40%
+            left: 27%
+            color: #F5FAFA
 
 .separator
     width: 80%
@@ -50,6 +66,12 @@ $modal-color-code: #F5FAFA;
     width: 20%;
     height: 100%;
     z-index: 1;
+
+.clock
+    font-family: 'Orbitron', sans-serif;
+    top: 95%;
+    position: fixed;
+    left: 6.5%;
 
 .profile-container
     left: 0px

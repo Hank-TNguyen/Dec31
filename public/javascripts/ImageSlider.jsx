@@ -2,8 +2,15 @@ import React, {Component} from "react";
 import Slider from "react-slick";
 
 export default class ImageSlider extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        this.state = {
+            imageStatus: "loading"
+        };
+    }
+
+    indexCallback = (index) => {
+        this.props.changeSlide(index);
     }
 
     render() {
@@ -16,15 +23,27 @@ export default class ImageSlider extends Component {
             autoplaySpeed: 5000,
             centerMode: true,
             arrows: true,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            afterChange: this.indexCallback
             };
+
+        if (this.state.imageStatus === "loaded") {
+            this.props.onImgReady();
+        }
 
         return (
             <Slider className="image-slider" {...sliderStyle}>
-                <div><img className="image-slide" src="../images/vietnam.png"/></div>
-                <div><img className="image-slide" src="../images/china.png"/></div>
-                <div><img className="image-slide" src="../images/alberta.png"/></div>
-                <div><img className="image-slide" src="../images/singapore.png"/></div>
+                {this.props.images.map(img => {
+                    return (
+                        <div key={img}>
+                            <img
+                                className="image-slide"
+                                src={img}
+                                onLoad={() => {
+                                    this.setState({imageStatus: "loaded"})
+                                }}/>
+                        </div>);
+                })}
             </Slider>
             );
         }
