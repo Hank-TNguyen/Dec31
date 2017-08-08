@@ -9,24 +9,20 @@
     "dev": "webpack node ./bin/www"
   },
   "dependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
     "debug": "~2.6.3",
     "express": "~4.15.2",
-    "morgan": "~1.8.1",
     "node-sass-middleware": "0.9.8",
     "pug": "~2.0.0-beta11",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-slick": "^0.14.11",
+    "react-tippy": "^1.2.1",
     "serve-favicon": "~2.4.2",
     "timezonedb-node": "^1.0.7",
-    "tippy.js": "^1.2.0",
-    "webpack": "^3.3.0"
+    "tippy.js": "^1.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

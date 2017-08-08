@@ -24,7 +24,8 @@ export default class ImageSlider extends Component {
             centerMode: true,
             arrows: true,
             adaptiveHeight: true,
-            afterChange: this.indexCallback
+            afterChange: this.indexCallback,
+            initialSlide: 1
             };
 
         if (this.state.imageStatus === "loaded") {
