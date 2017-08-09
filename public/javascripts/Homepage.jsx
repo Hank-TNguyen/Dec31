@@ -7,7 +7,8 @@ export default class Homepage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            storyIndex: 0
+            storyIndex: 0,
+            initialSlide: 0
         }
         const story = cloneJSON(require("./story.json")).story;
         this.images = story.map(s => {
@@ -30,8 +31,10 @@ export default class Homepage extends Component {
     onImgReady = () => {
         window.setTimeout(() => {
             document.querySelector("#homepage").style = null;
-        }, 1000)
-
+        }, 3000);
+        this.setState({
+            initialSlide: 0
+        });
     }
 
     render() {
@@ -46,6 +49,7 @@ export default class Homepage extends Component {
                         changeSlide={this.changeSlide}
                         images={this.images}
                         onImgReady={this.onImgReady}
+                        initialSlide={this.state.initialSlide}
                     />
                     <br/>
                     <div className="story">
