@@ -29,12 +29,7 @@ export default class Homepage extends Component {
     }
 
     onImgReady = () => {
-        window.setTimeout(() => {
-            document.querySelector("#homepage").style = null;
-        }, 3000);
-        this.setState({
-            initialSlide: 0
-        });
+        document.querySelector("#homepage").style = "opacity: 1; height: 100%";
     }
 
     render() {
@@ -42,16 +37,14 @@ export default class Homepage extends Component {
         const {storyIndex} = this.state;
 
         return (
-            <div>
+            <div style={{height: "100%"}}>
                 <LeftNav/>
                 <div className="main-content">
                     <ImageSlider
                         changeSlide={this.changeSlide}
                         images={this.images}
                         onImgReady={this.onImgReady}
-                        initialSlide={this.state.initialSlide}
                     />
-                    <br/>
                     <div className="story">
                         <div className="title">
                             {this.titles[storyIndex]}

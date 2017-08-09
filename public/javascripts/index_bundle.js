@@ -10825,12 +10825,7 @@ var Homepage = function (_Component) {
         };
 
         _this.onImgReady = function () {
-            window.setTimeout(function () {
-                document.querySelector("#homepage").style = null;
-            }, 3000);
-            _this.setState({
-                initialSlide: 0
-            });
+            document.querySelector("#homepage").style = "opacity: 1; height: 100%";
         };
 
         _this.state = {
@@ -10858,7 +10853,7 @@ var Homepage = function (_Component) {
 
             return _react2.default.createElement(
                 "div",
-                null,
+                { style: { height: "100%" } },
                 _react2.default.createElement(_LeftNav2.default, null),
                 _react2.default.createElement(
                     "div",
@@ -10866,10 +10861,8 @@ var Homepage = function (_Component) {
                     _react2.default.createElement(_ImageSlider2.default, {
                         changeSlide: this.changeSlide,
                         images: this.images,
-                        onImgReady: this.onImgReady,
-                        initialSlide: this.state.initialSlide
+                        onImgReady: this.onImgReady
                     }),
-                    _react2.default.createElement("br", null),
                     _react2.default.createElement(
                         "div",
                         { className: "story" },
@@ -13374,78 +13367,44 @@ var ImageSlider = function (_Component) {
         };
 
         _this.state = {
-            imgs: null
+            imageStatus: "loading"
         };
         return _this;
     }
 
     _createClass(ImageSlider, [{
-        key: "componentWillMount",
-        value: function componentWillMount() {
-            var _this2 = this;
-
-            this.imageFetcher = new Promise(function (resolve, reject) {
-                var imgs = _this2.props.images.map(function (imgSrc, index) {
-                    return _react2.default.createElement(
-                        "div",
-                        { key: index, "data-index": index },
-                        _react2.default.createElement("img", {
-                            className: "image-slide",
-                            src: imgSrc
-                        })
-                    );
-                });
-                resolve(imgs);
-            });
-
-            Promise.resolve(this.imageFetcher).then(function (imgs) {
-                var sliderStyle = {
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    autoplay: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplaySpeed: 5000,
-                    arrows: true,
-                    adaptiveHeight: true,
-                    afterChange: _this2.indexCallback
-                };
-                var _imgs = _react2.default.createElement(
-                    _reactSlick2.default,
-                    _extends({ className: "image-slider" }, sliderStyle),
-                    _react2.default.createElement(
-                        "div",
-                        null,
-                        _react2.default.createElement("img", { className: "image-slide", src: "../images/vietnam.png" })
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        null,
-                        _react2.default.createElement("img", { className: "image-slide", src: "../images/vietnam.png" })
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        null,
-                        _react2.default.createElement("img", { className: "image-slide", src: "../images/vietnam.png" })
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        null,
-                        _react2.default.createElement("img", { className: "image-slide", src: "../images/vietnam.png" })
-                    )
-                );
-                _this2.setState({
-                    imgs: _imgs
-                });
-                _this2.props.onImgReady();
-            });
-        }
-    }, {
         key: "render",
         value: function render() {
+            var _this2 = this;
 
-            return this.state.imgs;
+            var sliderStyle = {
+                dots: true,
+                infinite: true,
+                speed: 500,
+                autoplay: true,
+                slidesToShow: 1,
+                autoplaySpeed: 5000,
+                centerMode: true,
+                arrows: true,
+                afterChange: this.indexCallback
+            };
+
+            return _react2.default.createElement(
+                _reactSlick2.default,
+                _extends({ className: "image-slider" }, sliderStyle),
+                this.props.images.map(function (img) {
+                    return _react2.default.createElement(
+                        "div",
+                        { key: img, style: { height: "100%" } },
+                        _react2.default.createElement("img", {
+                            className: "image-slide",
+                            src: img,
+                            onLoad: function onLoad() {
+                                _this2.props.onImgReady();
+                            } })
+                    );
+                })
+            );
         }
     }]);
 

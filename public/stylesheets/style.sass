@@ -4,9 +4,15 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Saira');
 
+html
+    height: 100%
+    margin: 0
+
 body
-    padding: 50px
+    padding: 0px
     font: 14px "Saira", Helvetica, Arial, sans-serif
+    margin: 0
+    height: 100%
 
 a
     color: #00B7FF
@@ -14,31 +20,32 @@ a
 $background-color-code: #F5FAFA;
 $modal-color-code: #F5FAFA;
 
+div#homepage
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+
 .main-content
     background-color: #B7AFA3
-    position: fixed
     left: 20%
     top: 0
     height: 100%
     width: 80%
+    float: right
 
     .story
         .title
-            position: fixed
             top: 35%
             left: 27%
             color: #F5FAFA
             font-size: 31px
 
         .text
-            position: fixed
             top: 40%
             left: 27%
             color: #F5FAFA
-
-.separator
-    width: 80%
-    border-style: ridge
 
 .image-slide-container
     margin: 7% 0% 7% 0%
@@ -47,42 +54,50 @@ $modal-color-code: #F5FAFA;
     box-shadow: inset -4px -4px 5px 1px #DBA632
     padding: 2px
     border-radius: 9%
-    width: 50%
-    margin-bottom: 0
-    margin-left: 24%
+    max-width: 40%
+    margin-left: 29%
 
 .image-slider
-    width: 40%
-    position: fixed
-    left: 40%
     top: 4%
+    max-width: 60%;
+    left: 20%;
+
+.slick-center
+    text-align: center
 
 .left-nav
-    left: 0%;
-    top: 0%;
-    padding-top: 4%;
-    position: fixed;
+    left: 0px;
+    top: 0px;
     background-color: #F5FAFA;
     width: 20%;
     height: 100%;
     z-index: 1;
+    float: left;
 
-.clock
-    font-family: 'Orbitron', sans-serif;
-    top: 95%;
-    position: fixed;
-    left: 6.5%;
+    .separator
+        margin-top: 18%
+        width: 80%
+        border-style: ridge
 
-.profile-container
-    left: 0px
-    top: 0px
-    margin-bottom: 14%;
-    text-align: center;
-    padding: 1%
+    .clock
+        font-family: 'Orbitron', sans-serif;
+        position: fixed
+        top: 95%;
+        left: 6.5%;
 
-.profile-image
-    border-radius: 50%
-    width: 50%
-    overflow: hidden
-    background-color: #6D929B
-    padding: 6px
+    .profile-container
+        left: 0px
+        top: 0px
+        margin-bottom: 14%;
+        text-align: center;
+        padding: 1%
+
+        .profile-image
+            margin-top: 20%
+            border-radius: 50%
+            width: 50%
+            overflow: hidden
+            background-color: #6D929B
+            padding: 6px
+
+

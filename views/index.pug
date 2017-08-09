@@ -4,6 +4,6 @@ block scripts
     script(src='/javascripts/index_bundle.js')
 
 block content
-    img(src="/javascripts/loadingPages/loading.gif" style="position: absolute; top: 39%; left: 46%; width: 10%;")
-    div(id='homepage' style="display: none")
+    img(src="/javascripts/loadingPages/loading.gif" style="z-index: -1; position: absolute; top: 39%; left: 46%; width: 10%;")
+    div(id='homepage' style="opacity: 0; height: 100%")
     div(id='main')
