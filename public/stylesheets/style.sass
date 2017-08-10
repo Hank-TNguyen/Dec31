@@ -21,6 +21,13 @@ $background-color-code: #F5FAFA;
 $modal-color-code: #F5FAFA;
 
 div#homepage
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+    transition: opacity 3s ease-in-out;
+
+#loading-img
     -webkit-transition: opacity 2s ease-in-out;
     -moz-transition: opacity 2s ease-in-out;
     -ms-transition: opacity 2s ease-in-out;
@@ -36,15 +43,13 @@ div#homepage
     float: right
 
     .story
+        padding: 5% 5% 5% 5%
+
         .title
-            top: 35%
-            left: 27%
             color: #F5FAFA
             font-size: 31px
 
         .text
-            top: 40%
-            left: 27%
             color: #F5FAFA
 
 .image-slide-container

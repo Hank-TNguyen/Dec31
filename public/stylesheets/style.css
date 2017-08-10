@@ -17,6 +17,13 @@ a {
   color: #00B7FF; }
 
 div#homepage {
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -ms-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+  transition: opacity 3s ease-in-out; }
+
+#loading-img {
   -webkit-transition: opacity 2s ease-in-out;
   -moz-transition: opacity 2s ease-in-out;
   -ms-transition: opacity 2s ease-in-out;
@@ -30,15 +37,13 @@ div#homepage {
   height: 100%;
   width: 80%;
   float: right; }
-  .main-content .story .title {
-    top: 35%;
-    left: 27%;
-    color: #F5FAFA;
-    font-size: 31px; }
-  .main-content .story .text {
-    top: 40%;
-    left: 27%;
-    color: #F5FAFA; }
+  .main-content .story {
+    padding: 5% 5% 5% 5%; }
+    .main-content .story .title {
+      color: #F5FAFA;
+      font-size: 31px; }
+    .main-content .story .text {
+      color: #F5FAFA; }
 
 .image-slide-container {
   margin: 7% 0% 7% 0%; }
