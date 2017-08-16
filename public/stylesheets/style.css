@@ -75,11 +75,18 @@ div#homepage {
     margin-top: 18%;
     width: 80%;
     border-style: ridge; }
+  .left-nav .bio-section {
+    min-height: 55%;
+    max-height: 72%; }
   .left-nav .clock {
     font-family: 'Orbitron', sans-serif;
-    position: fixed;
-    top: 95%;
-    left: 6.5%; }
+    width: 100%;
+    text-align: center; }
+  .left-nav .contact-icon {
+    width: 30px; }
+  .left-nav .contact-icon:hover {
+    opacity: 0.5;
+    cursor: pointer; }
   .left-nav .profile-container {
     left: 0px;
     top: 0px;

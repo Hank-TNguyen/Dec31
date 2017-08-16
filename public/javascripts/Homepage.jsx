@@ -31,6 +31,12 @@ export default class Homepage extends Component {
     onImgReady = () => {
         document.querySelector("#homepage").style = "opacity: 1; height: 100%";
         document.querySelector("#loading-img").style = "opacity: 0; background-color: #F5FAFA; position: absolute; padding: 21% 45%; width: 10%;";
+        setTimeout(() => {
+            const toRemove =  document.querySelector("#loading-img");
+            if (toRemove) {
+                toRemove.parentNode.removeChild(toRemove)
+            }
+        }, 3000);
     }
 
     render() {

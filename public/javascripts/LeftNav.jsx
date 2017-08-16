@@ -64,7 +64,24 @@ export default class LeftNav extends Component {
             <div className="left-nav">
                 {this.getProfileImg()}
                 <hr className="separator"/>
+
+                <div className="bio-section">
+                BIO
+                </div>
+                <div className="contact">
+                    <table style={{width: "100%"}}>
+                        <tbody>
+                            <tr>
+                                <th><a href="https://www.linkedin.com/in/hnguyen95/" target="_blank"><img className="contact-icon" src="../images/linkedin.png"/></a></th>
+                                <th><a href="https://www.facebook.com/Hanktnguyen" target="_blank"><img className="contact-icon" src="../images/facebook_icon.png"/></a></th>
+                                <th><a href="mailto: t.hung.95@gmail.com" target="_blank"><img className="contact-icon" src="../images/email_icon.png"/></a></th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
                 <div className="clock">
+                    <div> Edmonton Time </div>
                     <div>{myTime.toLocaleTimeString()}</div>
                 </div>
             </div>

@@ -7091,7 +7091,60 @@ var LeftNav = function (_Component) {
                 _react2.default.createElement("hr", { className: "separator" }),
                 _react2.default.createElement(
                     "div",
+                    { className: "bio-section" },
+                    "BIO"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "contact" },
+                    _react2.default.createElement(
+                        "table",
+                        { style: { width: "100%" } },
+                        _react2.default.createElement(
+                            "tbody",
+                            null,
+                            _react2.default.createElement(
+                                "tr",
+                                null,
+                                _react2.default.createElement(
+                                    "th",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "https://www.linkedin.com/in/hnguyen95/", target: "_blank" },
+                                        _react2.default.createElement("img", { className: "contact-icon", src: "../images/linkedin.png" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "th",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "https://www.facebook.com/Hanktnguyen", target: "_blank" },
+                                        _react2.default.createElement("img", { className: "contact-icon", src: "../images/facebook_icon.png" })
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "th",
+                                    null,
+                                    _react2.default.createElement(
+                                        "a",
+                                        { href: "mailto: t.hung.95@gmail.com", target: "_blank" },
+                                        _react2.default.createElement("img", { className: "contact-icon", src: "../images/email_icon.png" })
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
                     { className: "clock" },
+                    _react2.default.createElement(
+                        "div",
+                        null,
+                        " Edmonton Time "
+                    ),
                     _react2.default.createElement(
                         "div",
                         null,
@@ -10827,6 +10880,12 @@ var Homepage = function (_Component) {
         _this.onImgReady = function () {
             document.querySelector("#homepage").style = "opacity: 1; height: 100%";
             document.querySelector("#loading-img").style = "opacity: 0; background-color: #F5FAFA; position: absolute; padding: 21% 45%; width: 10%;";
+            setTimeout(function () {
+                var toRemove = document.querySelector("#loading-img");
+                if (toRemove) {
+                    toRemove.parentNode.removeChild(toRemove);
+                }
+            }, 3000);
         };
 
         _this.state = {
