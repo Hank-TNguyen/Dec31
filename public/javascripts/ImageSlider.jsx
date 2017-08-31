@@ -1,5 +1,8 @@
 import React, {Component} from "react";
 import Slider from "react-slick";
+import {emojify} from "react-emojione";
+import {Tooltip} from 'react-tippy';
+import Emojify from 'react-emojione';
 
 export default class ImageSlider extends Component {
     constructor(props) {
@@ -26,20 +29,34 @@ export default class ImageSlider extends Component {
             afterChange: this.indexCallback
             };
 
+        const t = (<Emojify className="image-slider-pretext">
+                    I haven't been to a lot of places :sob:,
+                    so it might be easier for me to list them down and tell a bit about my journeys without wasting (much) of your time xDD
+                    Nonetheless, I wish to travel more. Suggestions?
+                </Emojify>);
+
         return (
-            <Slider className="image-slider" {...sliderStyle}>
-                {this.props.images.map(img => {
-                    return (
-                        <div key={img} style={{height: "100%"}}>
-                            <img
-                                className="image-slide"
-                                src={img}
-                                onLoad={() => {
-                                    this.props.onImgReady()
-                                }}/>
-                        </div>);
-                })}
-            </Slider>
+            <div>
+                <Tooltip
+                      html={t}
+                      position="top"
+                      arrow={true}
+                    >
+                    <Slider className="image-slider" {...sliderStyle}>
+                        {this.props.images.map(img => {
+                            return (
+                                <div key={img} style={{height: "100%"}}>
+                                    <img
+                                        className="image-slide"
+                                        src={img}
+                                        onLoad={() => {
+                                            this.props.onImgReady()
+                                        }}/>
+                                </div>);
+                        })}
+                    </Slider>
+                </Tooltip>
+            </div>
             );
         }
 }

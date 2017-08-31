@@ -7,6 +7,8 @@ module.exports = {
             './public/javascripts/CentreQuote.jsx',
             './public/javascripts/AuthorModal.jsx',
             './public/javascripts/LeftNav.jsx',
+            './public/javascripts/Footer.jsx',
+            './public/javascripts/Main.jsx',
             './public/javascripts/Homepage.jsx',
             './public/javascripts/ImageSlider.jsx'
         ]
