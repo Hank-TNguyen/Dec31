@@ -1261,7 +1261,7 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(60);
-var PooledClass = __webpack_require__(15);
+var PooledClass = __webpack_require__(16);
 var ReactFeatureFlags = __webpack_require__(61);
 var ReactReconciler = __webpack_require__(18);
 var Transaction = __webpack_require__(27);
@@ -1551,7 +1551,7 @@ module.exports = ReactCurrentOwner;
 
 var _assign = __webpack_require__(4);
 
-var PooledClass = __webpack_require__(15);
+var PooledClass = __webpack_require__(16);
 
 var emptyFunction = __webpack_require__(10);
 var warning = __webpack_require__(2);
@@ -2024,6 +2024,15 @@ module.exports = DOMProperty;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+module.exports = __webpack_require__(102);
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -2138,7 +2147,7 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2485,15 +2494,6 @@ ReactElement.isValidElement = function (object) {
 
 module.exports = ReactElement;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(102);
 
 /***/ }),
 /* 18 */
@@ -2856,7 +2856,7 @@ var _assign = __webpack_require__(4);
 var ReactBaseClasses = __webpack_require__(72);
 var ReactChildren = __webpack_require__(141);
 var ReactDOMFactories = __webpack_require__(145);
-var ReactElement = __webpack_require__(16);
+var ReactElement = __webpack_require__(17);
 var ReactPropTypes = __webpack_require__(149);
 var ReactVersion = __webpack_require__(150);
 
@@ -6757,7 +6757,7 @@ exports.default = LeftNav;
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 (function webpackUniversalModuleDefinition(root, factory) {
-  if (( false ? 'undefined' : _typeof(exports)) === 'object' && ( false ? 'undefined' : _typeof(module)) === 'object') module.exports = factory(__webpack_require__(6), __webpack_require__(91), __webpack_require__(17));else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(6), __webpack_require__(91), __webpack_require__(17)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+  if (( false ? 'undefined' : _typeof(exports)) === 'object' && ( false ? 'undefined' : _typeof(module)) === 'object') module.exports = factory(__webpack_require__(6), __webpack_require__(91), __webpack_require__(15));else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(6), __webpack_require__(91), __webpack_require__(15)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') exports["reactTippy"] = factory(require("react"), require("popper.js"), require("react-dom"));else root["reactTippy"] = factory(root["React"], root["Popper"], root["ReactDOM"]);
@@ -9537,7 +9537,7 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(15);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -10151,7 +10151,7 @@ function _classCallCheck(instance, Constructor) {
   }
 }
 
-var PooledClass = __webpack_require__(15);
+var PooledClass = __webpack_require__(16);
 
 var invariant = __webpack_require__(1);
 
@@ -11400,7 +11400,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var ReactCurrentOwner = __webpack_require__(12);
 var ReactComponentTreeHook = __webpack_require__(8);
-var ReactElement = __webpack_require__(16);
+var ReactElement = __webpack_require__(17);
 
 var checkReactTypeSpec = __webpack_require__(146);
 
@@ -16599,6 +16599,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _reactDom = __webpack_require__(15);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
 var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
@@ -16615,6 +16619,10 @@ var _reactEmojione2 = _interopRequireDefault(_reactEmojione);
 
 var _reactTippy = __webpack_require__(53);
 
+var _IFrameVideoPlayer = __webpack_require__(229);
+
+var _IFrameVideoPlayer2 = _interopRequireDefault(_IFrameVideoPlayer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16622,6 +16630,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var YOUTUBE_PINGPONG_SRC = "https://www.youtube.com/embed/3T3odwl_BL4";
 
 var Main = function (_Component) {
     _inherits(Main, _Component);
@@ -16639,7 +16649,7 @@ var Main = function (_Component) {
                 mc2: 0
             };
 
-            var story = (0, _utilities.cloneJSON)(__webpack_require__(229)).story;
+            var story = (0, _utilities.cloneJSON)(__webpack_require__(230)).story;
             _this.images = story.map(function (s) {
                 return s.image;
             });
@@ -16718,14 +16728,15 @@ var Main = function (_Component) {
         };
 
         _this.handleSportProof = function () {
-            var obj = document.querySelector("#youtube");
+            var obj = document.querySelector(".iframe-video");
             if (!obj) {
-                var youtube = document.createElement('iframe');
-                youtube.width = "560px";
-                youtube.height = "315px";
-                youtube.setAttribute("src", "https://www.youtube.com/embed/3T3odwl_BL4");
-                document.getElementById("mc-proof").appendChild(youtube);
+                _this.renderIFramePlayer(YOUTUBE_PINGPONG_SRC);
             }
+        };
+
+        _this.renderIFramePlayer = function (src) {
+            var iframePlayer = _react2.default.createElement(_IFrameVideoPlayer2.default, { src: src });
+            _reactDom2.default.render(iframePlayer, document.getElementById('iframe-video'));
         };
 
         _this.init();
@@ -16777,12 +16788,12 @@ var Main = function (_Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "title" },
-                        (0, _reactEmojione.emojify)(this.titles[storyIndex])
+                        this.titles[storyIndex]
                     ),
                     _react2.default.createElement(
                         "div",
                         { className: "text" },
-                        (0, _reactEmojione.emojify)(this.texts[storyIndex])
+                        this.texts[storyIndex]
                     )
                 )
             );
@@ -16918,7 +16929,7 @@ exports.default = ImageSlider;
 exports.__esModule = true;
 exports.getTrackLeft = exports.getTrackAnimateCSS = exports.getTrackCSS = undefined;
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(15);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -17213,7 +17224,7 @@ module.exports = __webpack_require__(220);
 
 __webpack_require__(101);
 __webpack_require__(89);
-__webpack_require__(230);
+__webpack_require__(231);
 __webpack_require__(52);
 __webpack_require__(92);
 __webpack_require__(93);
@@ -17228,7 +17239,7 @@ module.exports = __webpack_require__(94);
 "use strict";
 
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(15);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -17954,7 +17965,7 @@ module.exports = BeforeInputEventPlugin;
 
 var _assign = __webpack_require__(4);
 
-var PooledClass = __webpack_require__(15);
+var PooledClass = __webpack_require__(16);
 
 var getTextContentAccessor = __webpack_require__(59);
 
@@ -22578,7 +22589,7 @@ module.exports = checkPropTypes;
 
 
 var PooledClass = __webpack_require__(142);
-var ReactElement = __webpack_require__(16);
+var ReactElement = __webpack_require__(17);
 
 var emptyFunction = __webpack_require__(10);
 var traverseAllChildren = __webpack_require__(143);
@@ -23138,7 +23149,7 @@ module.exports = KeyEscapeUtils;
 
 
 
-var ReactElement = __webpack_require__(16);
+var ReactElement = __webpack_require__(17);
 
 /**
  * Create a factory that creates HTML tag elements.
@@ -23461,7 +23472,7 @@ module.exports = ReactPropTypesSecret;
 
 
 
-var _require = __webpack_require__(16),
+var _require = __webpack_require__(17),
     isValidElement = _require.isValidElement;
 
 var factory = __webpack_require__(70);
@@ -23507,7 +23518,7 @@ module.exports = '15.6.1';
 var _require = __webpack_require__(72),
     Component = _require.Component;
 
-var _require2 = __webpack_require__(16),
+var _require2 = __webpack_require__(17),
     isValidElement = _require2.isValidElement;
 
 var ReactNoopUpdateQueue = __webpack_require__(73);
@@ -23533,7 +23544,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 var _prodInvariant = __webpack_require__(19);
 
-var ReactElement = __webpack_require__(16);
+var ReactElement = __webpack_require__(17);
 
 var invariant = __webpack_require__(1);
 
@@ -25698,7 +25709,7 @@ module.exports = flattenChildren;
 
 var _assign = __webpack_require__(4);
 
-var PooledClass = __webpack_require__(15);
+var PooledClass = __webpack_require__(16);
 var Transaction = __webpack_require__(27);
 var ReactInstrumentation = __webpack_require__(9);
 var ReactServerUpdateQueue = __webpack_require__(165);
@@ -26388,7 +26399,7 @@ var _assign = __webpack_require__(4);
 
 var EventListener = __webpack_require__(84);
 var ExecutionEnvironment = __webpack_require__(7);
-var PooledClass = __webpack_require__(15);
+var PooledClass = __webpack_require__(16);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 
@@ -26630,7 +26641,7 @@ module.exports = ReactInjection;
 var _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(60);
-var PooledClass = __webpack_require__(15);
+var PooledClass = __webpack_require__(16);
 var ReactBrowserEventEmitter = __webpack_require__(31);
 var ReactInputSelection = __webpack_require__(85);
 var ReactInstrumentation = __webpack_require__(9);
@@ -29580,7 +29591,7 @@ var _objectAssign = __webpack_require__(4);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(15);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -33245,12 +33256,73 @@ function cloneJSON(json) {
 
 /***/ }),
 /* 229 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var IFrameVideoPlayer = function (_Component) {
+    _inherits(IFrameVideoPlayer, _Component);
+
+    function IFrameVideoPlayer(props) {
+        _classCallCheck(this, IFrameVideoPlayer);
+
+        return _possibleConstructorReturn(this, (IFrameVideoPlayer.__proto__ || Object.getPrototypeOf(IFrameVideoPlayer)).call(this, props));
+    }
+
+    _createClass(IFrameVideoPlayer, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                "div",
+                { className: "iframe-video-container", ref: "iframe-container", onClick: function onClick() {
+                        var iframe = _this2.refs["iframe-container"];
+                        iframe.parentNode.removeChild(iframe);
+                    } },
+                _react2.default.createElement(
+                    "iframe",
+                    { width: "560px", height: "315px",
+                        className: "iframe-video",
+                        src: this.props.src },
+                    "iframe not supported!"
+                )
+            );
+        }
+    }]);
+
+    return IFrameVideoPlayer;
+}(_react.Component);
+
+exports.default = IFrameVideoPlayer;
+
+/***/ }),
+/* 230 */
 /***/ (function(module, exports) {
 
 module.exports = {"story":[{"title":"Vietnam","image":"../images/vietnam.png","text":"This is where I was born."},{"title":"Singapore","image":"../images/singapore.png","text":"I took the opportunity to have an academic exchange semester in Singapore."},{"title":"Alberta, Canada","image":"../images/alberta.png","text":"I stated a new chapter in my life when I was 18. I'm currently here and pursuing a BSc. (Hons) in Computing Science."},{"title":"Beijing, China","image":"../images/china.png","text":"I traveled to Beijing on a cultural exchange opportunity in the Summer of 2013. The trip was organized by https://cungthieunhi.org.vn/, an organization in which I had my training in table tennis. Fees were covered by fundings from the correspondent organization in China (which is pretty sweet 😋). "}]}
 
 /***/ }),
-/* 230 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

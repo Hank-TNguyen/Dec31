@@ -1,9 +1,12 @@
+import ReactDOM from "react-dom";
 import React, {Component} from "react";
 import ImageSlider from "./ImageSlider.jsx";
 import {cloneJSON} from "./utilities.js";
-import {emojify} from "react-emojione";
 import Emojify from 'react-emojione';
 import {Tooltip} from 'react-tippy';
+import IFrameVideoPlayer from "./IFrameVideoPlayer.jsx";
+
+const YOUTUBE_PINGPONG_SRC = "https://www.youtube.com/embed/3T3odwl_BL4";
 
 export default class Main extends Component {
 
@@ -84,15 +87,15 @@ export default class Main extends Component {
     }
 
     handleSportProof = () => {
-        const obj = document.querySelector("#youtube")
+        const obj = document.querySelector(".iframe-video");
         if (!obj) {
-            const youtube = document.createElement('iframe');
-            youtube.width="560px";
-            youtube.height="315px";
-            youtube.setAttribute("src", "https://www.youtube.com/embed/3T3odwl_BL4");
-            document.getElementById("mc-proof").appendChild(youtube);
+            this.renderIFramePlayer(YOUTUBE_PINGPONG_SRC);
         }
+    }
 
+    renderIFramePlayer = (src) => {
+        const iframePlayer = (<IFrameVideoPlayer src={src}/>)
+        ReactDOM.render(iframePlayer, document.getElementById('iframe-video'));
     }
 
     render() {
@@ -121,10 +124,10 @@ export default class Main extends Component {
                 />
                 <div className="story">
                     <div className="title">
-                        {emojify(this.titles[storyIndex])}
+                        {this.titles[storyIndex]}
                     </div>
                     <div className="text">
-                        {emojify(this.texts[storyIndex])}
+                        {this.texts[storyIndex]}
                     </div>
                 </div>
             </div>

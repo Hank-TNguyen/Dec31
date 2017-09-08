@@ -3,7 +3,28 @@ extends layout
 block scripts
     script(src='/javascripts/index_bundle.js')
 
+    //- script
+    //-     window.fbAsyncInit = function() {
+    //-         FB.init({
+    //-             appId      : '{your-app-id}',
+    //-             cookie     : true,
+    //-             xfbml      : true,
+    //-             version    : '{latest-api-version}'
+    //-         });
+    //-         FB.AppEvents.logPageView();
+    //-     };
+
+    //-     (function(d, s, id){
+    //-         var js, fjs = d.getElementsByTagName(s)[0];
+    //-         if (d.getElementById(id)) {return;}
+    //-         js = d.createElement(s); js.id = id;
+    //-         js.src = "//connect.facebook.net/en_US/sdk.js";
+    //-         fjs.parentNode.insertBefore(js, fjs);
+    //-     }(document, 'script', 'facebook-jssdk'));
+    //- script
+
 block content
     img(id='loading-img' src="/javascripts/loadingPages/loading.gif" style="opacity: 1; background-color: #F5FAFA; position: absolute; padding: 21% 45% 21% 45%; width: 10%;")
     div(id='homepage' style="opacity: 0; height: 100%")
     div(id='main')
+    div(id='iframe-video')
