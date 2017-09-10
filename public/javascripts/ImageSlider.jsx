@@ -30,9 +30,8 @@ export default class ImageSlider extends Component {
             };
 
         const t = (<Emojify className="image-slider-pretext">
-                    I haven't been to a lot of places :sob:,
-                    so it might be easier for me to list them down and tell a bit about my journeys without wasting (much) of your time xDD
-                    Nonetheless, I wish to travel more. Suggestions?
+                    These are the places I have traveled to. Yeah, you won't run out of fingers on one hand. xDD
+                    Any suggestions on where I should visit next?
                 </Emojify>);
 
         return (

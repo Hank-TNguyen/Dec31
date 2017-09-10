@@ -50,8 +50,9 @@ export default class Main extends Component {
                       arrow={true}
                       interactive={true}
                     >
-                        <span id="mc-proof" onClick={this.handleSportProof}> Need proof?</span>
+                        <span id="mc-proof" onClick={this.handleSportProof}> Need proof? </span>
                     </Tooltip>
+                    I am also an occasional swimmer, try-hard guy at badminton court.
                 </span>
             </Emojify>
             )

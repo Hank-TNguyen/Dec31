@@ -6714,12 +6714,53 @@ var LeftNav = function (_Component) {
                     "div",
                     { className: "bio-section" },
                     _react2.default.createElement(
-                        "span",
+                        "div",
+                        { className: "intro-pos" },
+                        " Software Developer ",
+                        _react2.default.createElement(
+                            "span",
+                            { style: { float: "right" } },
+                            "@ ",
+                            _react2.default.createElement(
+                                "a",
+                                { href: "http://www.intuit.ca/intuit-products/index.jsp" },
+                                "Intuit Inc."
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "intro-pos" },
+                        " && Student ",
+                        _react2.default.createElement(
+                            "span",
+                            { style: { float: "right" } },
+                            "@ ",
+                            _react2.default.createElement(
+                                "a",
+                                { href: "https://www.ualberta.ca/" },
+                                " UAlberta"
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "resume" },
+                        "A copy of my ",
+                        _react2.default.createElement(
+                            "a",
+                            { href: "https://drive.google.com/open?id=0B2VMAh6F7V4fb2U3QWR3UTFlcUE", target: "_blank" },
+                            "resume"
+                        ),
+                        " "
+                    ),
+                    _react2.default.createElement(
+                        "div",
                         { className: "contact-text" },
                         "Contact: "
                     ),
                     _react2.default.createElement(
-                        "span",
+                        "div",
                         { className: "contact-icon-container" },
                         _react2.default.createElement(
                             "a",
@@ -16691,9 +16732,10 @@ var Main = function (_Component) {
                         _react2.default.createElement(
                             "span",
                             { id: "mc-proof", onClick: _this.handleSportProof },
-                            " Need proof?"
+                            " Need proof? "
                         )
-                    )
+                    ),
+                    "I am also an occasional swimmer, try-hard guy at badminton court."
                 )
             );
             _this.mc1 = [" a few languages", mc1_2];
@@ -16880,7 +16922,7 @@ var ImageSlider = function (_Component) {
             var t = _react2.default.createElement(
                 _reactEmojione2.default,
                 { className: "image-slider-pretext" },
-                "I haven't been to a lot of places :sob:, so it might be easier for me to list them down and tell a bit about my journeys without wasting (much) of your time xDD Nonetheless, I wish to travel more. Suggestions?"
+                "These are the places I have traveled to. Yeah, you won't run out of fingers on one hand. xDD Any suggestions on where I should visit next?"
             );
 
             return _react2.default.createElement(

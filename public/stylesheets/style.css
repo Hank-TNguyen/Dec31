@@ -27,7 +27,8 @@ a {
   background-color: rgba(0, 0, 0, 0.8); }
   .iframe-video-container .iframe-video {
     position: absolute;
-    top: 0; }
+    top: 25%;
+    left: 25%; }
 
 div#homepage {
   -webkit-transition: opacity 3s ease-in-out;
@@ -54,8 +55,8 @@ div#homepage {
   flex: 1;
   color: #F5FAFA; }
   .main-content .intro {
-    padding: 20px;
-    height: 425px; }
+    padding: 60px 60px 90px 60px;
+    height: fit-content; }
     .main-content .intro .intro-hi {
       font-size: 40px; }
     .main-content .intro span {
@@ -109,11 +110,14 @@ div#homepage {
     border-style: ridge; }
   .left-nav .bio-section {
     min-height: 425px;
-    max-height: 72%; }
+    max-height: 72%;
+    padding-left: 10px; }
+    .left-nav .bio-section .intro-pos {
+      padding-bottom: 15px;
+      padding-right: 15px; }
     .left-nav .bio-section .contact-text {
       padding-top: 5px;
-      float: left;
-      padding-left: 10px; }
+      float: left; }
     .left-nav .bio-section .contact-icon-container {
       float: right; }
       .left-nav .bio-section .contact-icon-container .contact-icon {
@@ -122,6 +126,8 @@ div#homepage {
     .left-nav .bio-section .contact-icon:hover {
       opacity: 0.5;
       cursor: pointer; }
+    .left-nav .bio-section .resume {
+      padding-bottom: 15px; }
   .left-nav .profile-container {
     left: 0px;
     top: 0px;
