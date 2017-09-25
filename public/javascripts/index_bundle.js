@@ -6695,7 +6695,7 @@ var LeftNav = function (_Component) {
                         position: "right-start",
                         arrow: true
                     },
-                    _react2.default.createElement("img", { className: "profile-image", src: "../images/square.png" })
+                    _react2.default.createElement("img", { className: "profile-image", src: "../images/profile.png" })
                 )
             );
         }, _temp), _possibleConstructorReturn(_this, _ret);

@@ -13,7 +13,7 @@ export default class LeftNav extends Component {
                   position="right-start"
                   arrow={true}
                 >
-                  <img className="profile-image" src="../images/square.png"/>
+                  <img className="profile-image" src="../images/profile.png"/>
                 </Tooltip>
             </div>
             );
