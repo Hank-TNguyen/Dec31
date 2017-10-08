@@ -15,6 +15,8 @@ var testing = require('./routes/testing');
 
 var app = express();
 
+var firebaseApp = require('./plugins/firebase/firebase_app.js')
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -57,6 +59,11 @@ app.get('/oauth/linkedin/callback', function(req, res) {
         if ( err )
             return console.error(err);
 
+        console.log(results.access_token);
+        var linkedin = Linkedin.init(results.access_token);
+        linkedin.people.me(function (err, data) {
+          firebaseApp.writeUserData(data.id, data.formattedName, '', data.pictureUrl);
+        });
         return res.redirect('/testing');
     });
 });

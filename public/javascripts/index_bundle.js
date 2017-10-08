@@ -6731,7 +6731,7 @@ var LeftNav = function (_Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "intro-pos" },
-                        " && Student ",
+                        " & Student ",
                         _react2.default.createElement(
                             "span",
                             { style: { float: "right" } },
