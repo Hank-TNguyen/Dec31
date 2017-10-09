@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     res.render('testing', { title: '© Hank. Test!' });
 
     console.log(req.sessionID);
-
+    console.log(window);
 });
 
 module.exports = router;

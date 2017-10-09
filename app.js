@@ -47,7 +47,9 @@ app.get('/products/:id', function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for all origins!'})
 });
 
-var Linkedin = require('node-linkedin')('77bprhhwzygdid', 'CkeX9rfc2BwEMAH6', '/oauth/linkedin/callback');
+
+var callbackURL = 'https://dec31.azurewebsites.net/testing';
+var Linkedin = require('node-linkedin')('77bprhhwzygdid', 'CkeX9rfc2BwEMAH6', callbackURL);
 var scope = ['r_basicprofile'];
 app.get('/oauth/linkedin', function(req, res) {
     // This will ask for permisssions etc and redirect to callback url.
