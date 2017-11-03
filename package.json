@@ -29,8 +29,8 @@
     "react-slick": "^0.14.11",
     "react-tippy": "^1.2.1",
     "serve-favicon": "~2.4.2",
-    "timezonedb-node": "^1.0.7",
-    "tippy.js": "^1.2.0"
+    "tippy.js": "^1.2.0",
+    "pug-bootstrap": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
