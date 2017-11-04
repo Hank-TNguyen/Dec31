@@ -6543,7 +6543,6 @@ var ClipboardCopy = function (_Component) {
     _createClass(ClipboardCopy, [{
         key: "componentWillUpdate",
         value: function componentWillUpdate() {
-            console.log("save storage");
             _store2.default.set(KEY, this.state.savedString);
         }
     }, {
@@ -6592,13 +6591,7 @@ var ClipboardCopyBox = function (_Component2) {
         var _this3 = _possibleConstructorReturn(this, (ClipboardCopyBox.__proto__ || Object.getPrototypeOf(ClipboardCopyBox)).call(this, props));
 
         _this3.handleCopy = function () {
-            _this3.textRef ? _this3.textRef.addEventListener("copy", function (event) {
-                event.preventDefault();
-                if (event.clipboardData) {
-                    event.clipboardData.setData("text/plain", _this3.textRef.value);
-                    console.log(event.clipboardData.getData("text"));
-                }
-            }) : null;
+            _this3.textRef.select();
             document.execCommand("copy");
         };
 
@@ -6636,7 +6629,7 @@ var ClipboardCopyBox = function (_Component2) {
                     _react2.default.createElement("textarea", {
                         ref: this.getRefCallback("textRef"),
                         onChange: this.saveString,
-                        defaultValue: this.props.savedText,
+                        value: this.props.savedText,
                         type: "text"
                     })
                 ),

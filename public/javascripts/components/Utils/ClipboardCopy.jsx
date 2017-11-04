@@ -12,12 +12,11 @@ export default class ClipboardCopy extends Component {
     }
 
     componentWillUpdate() {
-        console.log("save storage");
         storage.set(KEY, this.state.savedString);
     }
 
     handleAdd = () => {
-        this.setState({savedString: this.state.savedString.concat({savedText: ""})});
+        this.setState({savedString: this.state.savedString.concat({savedText: ``})});
     }
 
     handleRemoveBox = (ind) => {
@@ -62,13 +61,7 @@ class ClipboardCopyBox extends Component {
     }
 
     handleCopy = () => {
-        this.textRef ? this.textRef.addEventListener("copy", (event) => {
-            event.preventDefault();
-            if (event.clipboardData) {
-                event.clipboardData.setData("text/plain", this.textRef.value);
-                console.log(event.clipboardData.getData("text"));
-            }
-        }) : null;
+        this.textRef.select();
         document.execCommand("copy");
     }
 
@@ -97,7 +90,7 @@ class ClipboardCopyBox extends Component {
                     <textarea
                         ref={this.getRefCallback("textRef")}
                         onChange={this.saveString}
-                        defaultValue={this.props.savedText}
+                        value={this.props.savedText}
                         type="text"
                     />
                 </div>

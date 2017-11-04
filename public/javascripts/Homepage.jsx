@@ -7,7 +7,7 @@ export default class Homepage extends Component {
     render() {
 
         return (
-            <div style={{height: "100%"}}>
+            <div style={{top: "50px", height: "2000px", position: "relative"}}>
                 <LeftNav/>
                 <Main/>
                 <Footer/>
