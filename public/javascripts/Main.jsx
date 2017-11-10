@@ -5,6 +5,7 @@ import {cloneJSON} from "./utilities.js";
 import Emojify from 'react-emojione';
 import {Tooltip} from 'react-tippy';
 import IFrameVideoPlayer from "./IFrameVideoPlayer.jsx";
+import Timeline from "./components/Timeline.jsx";
 
 const YOUTUBE_PINGPONG_SRC = "https://www.youtube.com/embed/3T3odwl_BL4";
 
@@ -105,6 +106,7 @@ export default class Main extends Component {
 
         return (
             <div className="main-content" style={{display: "inherit"}}>
+                <div className="main-background"></div>
 
                 <div className="intro">
                     <div className="intro-hi">Hi!</div>
@@ -118,6 +120,13 @@ export default class Main extends Component {
 
                 </div>
 
+                <hr className="separator"/>
+
+                <div style={{textAlign: "center"}}>
+                    <Timeline />
+                </div>
+
+                <hr className="separator"/>
                 <ImageSlider
                     changeSlide={this.changeSlide}
                     images={this.images}
@@ -131,7 +140,24 @@ export default class Main extends Component {
                         {this.texts[storyIndex]}
                     </div>
                 </div>
+
+                <hr className="separator"/>
+
+                <div id="about" className="intro">
+                    <h2 style={{textAlign: "center"}}>About</h2>
+                    <p>
+                        I implement a simple web app (NodeJS backend using ExpressJS framework) to showcase skills that <b>you</b> or
+                        a potential employer might be interested. I want to thank the open source society who provides:
+                    </p>
+                    <ul style={{listStyleType: "circle"}}>
+                        <li href="https://github.com/JedWatson/generator-react-express">https://github.com/JedWatson/generator-react-express</li>
+                        <li href="https://github.com/mike-goodwin/pug-bootstrap/">https://github.com/mike-goodwin/pug-bootstrap</li>
+                    </ul>
+                    <p>
+                        Also, this webapp is hosted on Azure at 0 cost (free tier for student) thanks to Microsoft!
+                    </p>
+                </div>
             </div>
-        )
+        );
     }
 }

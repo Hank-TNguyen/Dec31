@@ -6,24 +6,29 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var sassMiddleware = require('node-sass-middleware');
 var morgan = require('morgan');
-var cors = require('cors');
 var secure = require('express-force-https');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 var testing = require('./routes/testing');
 var utility = require('./routes/utils');
+var oauth = require('./routes/oauth');
 
 var app = express();
 
-var firebaseApp = require('./plugins/firebase/firebase_app.js')
+// ROUTES
+app.use('/', index);
+app.use('/users', users);
+app.use('/testing', testing);
+app.use('/utils', utility);
+app.use('/oauth', oauth);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(secure);
-app.use(favicon(path.join(__dirname, 'public', 'doge.ico')));
+app.use(favicon(path.join(__dirname, 'public/images', 'favicon_H.jpg')));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,16 +47,9 @@ app.use(sassMiddleware({
   indentedSyntax: true, // true = .sass and false = .scss
   sourceMap: true
 }));
+
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
-app.get('/products/:id', function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for all origins!'})
-});
 
-
-var callbackURL = 'https://dec31.azurewebsites.net/testing';
-var Linkedin = require('node-linkedin')('77bprhhwzygdid', 'CkeX9rfc2BwEMAH6', callbackURL);
-var scope = ['r_basicprofile'];
 app.get('/oauth/linkedin', function(req, res) {
     // This will ask for permisssions etc and redirect to callback url.
     Linkedin.auth.authorize(res, scope, 'hanknguyen');
@@ -65,16 +63,12 @@ app.get('/oauth/linkedin/callback', function(req, res) {
         console.log(results.access_token);
         var linkedin = Linkedin.init(results.access_token);
         linkedin.people.me(function (err, data) {
-          firebaseApp.writeUserData(data.id, data.formattedName, '', data.pictureUrl);
+          console.log("do something here!!!");
         });
         return res.redirect('/testing');
     });
 });
 
-app.use('/', index);
-app.use('/users', users);
-app.use('/testing', testing);
-app.use('/utils', utility);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

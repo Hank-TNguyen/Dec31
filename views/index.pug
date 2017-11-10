@@ -8,26 +8,6 @@ append styles
 block scripts
     script(src='/javascripts/dists/index_bundle.js')
 
-    //- script
-    //-     window.fbAsyncInit = function() {
-    //-         FB.init({
-    //-             appId      : '{your-app-id}',
-    //-             cookie     : true,
-    //-             xfbml      : true,
-    //-             version    : '{latest-api-version}'
-    //-         });
-    //-         FB.AppEvents.logPageView();
-    //-     };
-
-    //-     (function(d, s, id){
-    //-         var js, fjs = d.getElementsByTagName(s)[0];
-    //-         if (d.getElementById(id)) {return;}
-    //-         js = d.createElement(s); js.id = id;
-    //-         js.src = "//connect.facebook.net/en_US/sdk.js";
-    //-         fjs.parentNode.insertBefore(js, fjs);
-    //-     }(document, 'script', 'facebook-jssdk'));
-    //- script
-
 block body
     nav.navbar.navbar-inverse.navbar-fixed-top
         .container-fluid
@@ -39,6 +19,14 @@ block body
                     span.icon-bar
                 a.navbar-brand(href='#') Hank T. Nguyen
             #navbar.navbar-collapse.collapse
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href='#') Home
+                    li
+                        a(href='/utils') Utilities
+                    li
+                        a(href='#about') About
+
     img(id='loading-img' src="/javascripts/loadingPages/loading.gif" style="opacity: 1; background-color: #F5FAFA; position: absolute; padding: 21% 45% 21% 45%; width: 10%;")
     div(id='homepage' style="opacity: 0; height: 95%:")
     div(id='main')

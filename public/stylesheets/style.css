@@ -1,6 +1,7 @@
 @import url(./tippy.css);
 @import url(./slick-theme.css);
 @import url(./slick.css);
+@import url(./timeline.css);
 @import url("https://fonts.googleapis.com/css?family=Orbitron");
 @import url("https://fonts.googleapis.com/css?family=Saira");
 html {
@@ -45,27 +46,43 @@ div#homepage {
   transition: opacity 2s ease-in-out; }
 
 .main-content {
-  background-color: #B7AFA3;
   position: relative;
   height: inherit;
   width: 80%;
   float: right;
   overflow: auto;
   flex: 1;
-  color: #F5FAFA; }
+  color: #FFFFFF; }
+  .main-content .separator {
+    width: 70%;
+    border-style: ridge;
+    margin: 20px auto; }
+  .main-content .main-background {
+    background-color: #B7AFA3;
+    background-image: url("../images/background.jpg");
+    top: 50px;
+    left: 20%;
+    z-index: -1;
+    filter: grayscale(50%) blur(5px) brightness(75%);
+    opacity: 0.8;
+    background-size: cover;
+    width: 80%;
+    height: 100%;
+    position: fixed; }
   .main-content .intro {
-    padding: 60px 60px 90px 60px;
+    filter: "";
+    padding: 60px 60px 10px 60px;
     height: fit-content; }
     .main-content .intro .intro-hi {
       font-size: 40px; }
     .main-content .intro span {
       font-style: italic;
-      color: #6D929B; }
+      color: #DFEFF0; }
     .main-content .intro span.mc-full {
       font-style: normal;
       color: #F5FAFA; }
     .main-content .intro span:hover {
-      color: #C1DAD6;
+      color: #AD235E;
       cursor: pointer; }
   .main-content .story {
     padding: 5% 5% 5% 5%;
@@ -104,7 +121,8 @@ div#homepage {
   .left-nav .separator {
     margin-top: 18%;
     width: 80%;
-    border-style: ridge; }
+    border-style: ridge;
+    margin: 20px auto; }
   .left-nav .bio-section {
     min-height: 425px;
     max-height: 72%;
@@ -136,8 +154,8 @@ div#homepage {
       border-radius: 50%;
       width: 50%;
       overflow: hidden;
-      background-color: #6D929B;
-      padding: 6px; }
+      background-color: maroon;
+      padding: 1px; }
 
 .footer {
   width: 100%;

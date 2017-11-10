@@ -1,6 +1,7 @@
 @import "./tippy.css";
 @import "./slick-theme.css";
 @import "./slick.css";
+@import "./timeline.css"
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Saira');
 
@@ -50,17 +51,36 @@ div#homepage
     transition: opacity 2s ease-in-out;
 
 .main-content
-    background-color: #B7AFA3
+
     position: relative
     height: inherit
     width: 80%
     float: right
     overflow: auto
     flex: 1
-    color: #F5FAFA
+    color: #FFFFFF
+
+    .separator
+        width: 70%
+        border-style: ridge
+        margin: 20px auto
+
+    .main-background
+        background-color: #B7AFA3
+        background-image: url("../images/background.jpg");
+        top: 50px
+        left: 20%
+        z-index: -1
+        filter: grayscale(50%) blur(5px) brightness(75%)
+        opacity: 0.8
+        background-size: cover
+        width: 80%
+        height: 100%
+        position: fixed
 
     .intro
-        padding: 60px 60px 90px 60px
+        filter: ""
+        padding: 60px 60px 10px 60px
         height: fit-content
 
         .intro-hi
@@ -68,14 +88,14 @@ div#homepage
 
         span
             font-style: italic
-            color: #6D929B
+            color: #DFEFF0
 
         span.mc-full
             font-style: normal
             color: #F5FAFA
 
         span:hover
-            color: #C1DAD6
+            color: #AD235E
             cursor: pointer
 
     .story
@@ -124,6 +144,7 @@ div#homepage
         margin-top: 18%
         width: 80%
         border-style: ridge
+        margin: 20px auto
 
     .bio-section
         min-height: 425px
@@ -164,8 +185,8 @@ div#homepage
             border-radius: 50%
             width: 50%
             overflow: hidden
-            background-color: #6D929B
-            padding: 6px
+            background-color: maroon
+            padding: 1px
 
 .footer
     width: 100%;
@@ -190,3 +211,6 @@ div#homepage
         float: right;
         margin-right: 20px;
         margin-top: 11px;
+
+
+

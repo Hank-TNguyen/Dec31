@@ -1,13 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var linkedin = require('node-linkedin')('77bprhhwzygdid', 'CkeX9rfc2BwEMAH6');
+var path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('testing', { title: '© Hank. Test!' });
-
-    console.log(req.sessionID);
-    console.log(window);
+    res.sendFile(path.join(path.resolve("public/javascripts/components/") + "/test.html"));
 });
 
 module.exports = router;
