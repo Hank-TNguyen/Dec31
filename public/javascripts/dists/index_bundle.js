@@ -16757,6 +16757,11 @@ var Main = function (_Component) {
                     _react2.default.createElement(_Timeline2.default, null)
                 ),
                 _react2.default.createElement("hr", { className: "separator" }),
+                _react2.default.createElement(
+                    "h2",
+                    { style: { textAlign: "center", color: "#FFFFFF", paddingBottom: "10px" } },
+                    "Places I have been to"
+                ),
                 _react2.default.createElement(_ImageSlider2.default, {
                     changeSlide: this.changeSlide,
                     images: this.images,

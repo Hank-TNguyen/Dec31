@@ -127,6 +127,7 @@ export default class Main extends Component {
                 </div>
 
                 <hr className="separator"/>
+                <h2 style={{textAlign: "center", color: "#FFFFFF", paddingBottom: "10px"}}>Places I have been to</h2>
                 <ImageSlider
                     changeSlide={this.changeSlide}
                     images={this.images}
