@@ -16784,7 +16784,7 @@ var Main = function (_Component) {
                 _react2.default.createElement("hr", { className: "separator" }),
                 _react2.default.createElement(
                     "div",
-                    { id: "about", className: "intro" },
+                    { id: "about", className: "intro", style: { paddingTop: "5px" } },
                     _react2.default.createElement(
                         "h2",
                         { style: { textAlign: "center" } },

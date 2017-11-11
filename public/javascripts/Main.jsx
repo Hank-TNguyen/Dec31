@@ -144,7 +144,7 @@ export default class Main extends Component {
 
                 <hr className="separator"/>
 
-                <div id="about" className="intro">
+                <div id="about" className="intro" style={{paddingTop: "5px"}}>
                     <h2 style={{textAlign: "center"}}>About</h2>
                     <p>
                         I implement a simple web app (NodeJS backend using ExpressJS framework) to showcase skills that <b>you</b> or
