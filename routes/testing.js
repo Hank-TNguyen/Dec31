@@ -7,4 +7,8 @@ router.get('/', function(req, res, next) {
     res.sendFile(path.join(path.resolve("public/javascripts/components/") + "/test.html"));
 });
 
+router.get('/background', function(req, res) {
+    res.sendFile(path.resolve("public/images/background.jpg"));
+});
+
 module.exports = router;
