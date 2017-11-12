@@ -148,7 +148,7 @@ export default class Main extends Component {
                     <h2 style={{textAlign: "center"}}>About</h2>
                     <p>
                         I implement a simple web app (NodeJS backend using ExpressJS framework) to showcase skills that <b>you</b> or
-                        a potential employer might be interested. I want to thank the open source society who provides:
+                        a potential employer might be interested in. I want to thank the open source society who provides:
                     </p>
                     <ul style={{listStyleType: "circle"}}>
                         <li href="https://github.com/JedWatson/generator-react-express">https://github.com/JedWatson/generator-react-express</li>
