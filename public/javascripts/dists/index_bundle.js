@@ -33213,7 +33213,7 @@ var Timeline = function (_Component) {
             return _react2.default.createElement(
                 "div",
                 null,
-                _react2.default.createElement("iframe", { style: { background: "transparent", minHeight: "500px", width: "100%" }, src: "/testing" })
+                _react2.default.createElement("iframe", { style: { background: "transparent", minHeight: "500px", width: "100%" }, src: "https://hank-tnguyen.github.io/My-Resume/timeline.html" })
             );
         }
     }]);
