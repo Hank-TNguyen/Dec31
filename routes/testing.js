@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require('path');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/timeline', function(req, res, next) {
     res.sendFile(path.join(__dirname + "/static/timeline.html"));
 });
 
