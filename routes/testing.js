@@ -4,7 +4,7 @@ var path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.sendFile(path.join(path.resolve("public/javascripts/components/") + "/test.html"));
+    res.sendFile(path.join(__dirname + "/static/timeline.html"));
 });
 
 router.get('/background', function(req, res) {
