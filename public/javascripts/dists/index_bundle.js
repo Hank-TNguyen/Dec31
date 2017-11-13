@@ -16799,7 +16799,7 @@ var Main = function (_Component) {
                             null,
                             "you"
                         ),
-                        " or a potential employer might be interested. I want to thank the open source society who provides:"
+                        " or a potential employer might be interested in. I want to thank the open source society who provides:"
                     ),
                     _react2.default.createElement(
                         "ul",
@@ -33213,7 +33213,7 @@ var Timeline = function (_Component) {
             return _react2.default.createElement(
                 "div",
                 null,
-                _react2.default.createElement("iframe", { style: { background: "transparent", minHeight: "500px", width: "100%" }, src: "https://hank-tnguyen.github.io/My-Resume/timeline.html" })
+                _react2.default.createElement("iframe", { style: { background: "transparent", minHeight: "500px", width: "100%" }, src: "/testing/timeline" })
             );
         }
     }]);
