@@ -8,6 +8,7 @@
     "start": "node ./bin/www",
     "dev": "webpack node ./bin/www"
   },
+  "engines" : { "node" : ">=6.0.0" },
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
